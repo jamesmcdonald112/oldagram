@@ -4,8 +4,8 @@ Oldagram is a simple social media-inspired app that dynamically displays posts u
 
 ## Live Demo
 
-- Click here for the live demo
-Ÿ
+- [Click here for the live demo](https://willowy-semifreddo-d75892.netlify.app/)
+
 ## Features
 
 - Dynamic rendering of user posts.
