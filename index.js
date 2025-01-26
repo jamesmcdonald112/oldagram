@@ -28,3 +28,57 @@ const posts = [
     }
 ]
 
+function renderPosts(posts) {
+    const container = document.getElementById("posts-container");
+    posts.forEach((post) => {
+        const postHtml = `
+            <div class="container">
+                <header>
+                    <img
+                    class="profile-image"
+                    src="${post.avatar}"
+                    alt="${post.name}"
+                    />
+                    <div class="flex-column">
+                    <h2>${post.name}</h2>
+                    <h3>${post.location}</h3>
+                    </div>
+                </header>
+            </div>
+
+            <div class="container">
+                <main>
+                    <img src="${post.post}" alt="${post.name}" />
+
+                    <div class="post-engagement">
+                    
+                    <!-- Icons -->
+                    <div class="post-actions">
+                        <img
+                        class="post-img"
+                        src="./images/icon-heart.png"
+                        alt="Heart icon."
+                        />
+                        <img
+                        class="post-img"
+                        src="./images/icon-comment.png"
+                        alt="Comment icon."
+                        />
+                        <img class="post-img" src="./images/icon-dm.png" alt="Dm icon." />
+                    </div>
+                    <!-- Likes Count -->
+                    <p id="likes">${post.likes} likes</p>
+                    <p id="comment">
+                        <span id="user-comment">${post.username}</span> ${post.comment}
+                    </p>
+                    </div>
+                </main>
+            </div>
+        `;
+
+        container.innerHTML += postHtml
+    });
+}
+
+renderPosts(posts);
+
